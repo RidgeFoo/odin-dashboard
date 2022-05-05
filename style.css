@@ -94,14 +94,14 @@ a:hover > svg {
   fill: var(--color-hover-link);
 }
 
-.logo svg {
-  width: 48px;
-  height: 48px;
-}
-
 svg {
   width: 24px;
   height: 24px;
+}
+
+.logo svg {
+  width: 48px;
+  height: 48px;
 }
 
 a {
@@ -115,7 +115,7 @@ ul li a {
   justify-content: start;
   align-items: center;
   gap: 10px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .search {
@@ -219,6 +219,9 @@ button {
 
 .projects {
   grid-area: projects;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: min-content;
 }
 
 .card-container {
@@ -261,11 +264,29 @@ button {
   grid-template-columns: min-content auto;
   gap: 10px;
   align-items: center;
-  padding-bottom: 8px;
 }
 
 hr {
-  border: 1px solid var(--accent-bg-color);
-  margin-top: 10px;
-  margin-bottom: 10px;
+  border: 0;
+  background-color: var(--accent-bg-color);
+  height: 1px;
+  width: 100%;
+}
+
+.announcement-container {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-auto-flow: row;
+}
+
+.trending-container {
+  display: grid;
+  grid-template-rows: min-content;
+}
+
+.trending-container .card {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: min-content;
+  gap: 8px;
 }
