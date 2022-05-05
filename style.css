@@ -1,0 +1,38 @@
+:root {
+  --blue-color: rgb(24, 135, 206);
+  --font-family: "Quicksand", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar main"
+  ;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--blue-color);
+  display: grid;
+  grid-template-rows: min-content min-content auto;
+}
+
+.header {
+  grid-area: header;
+  background: gray;
+}
+
+.main {
+  grid-area: main;
+  background-color: cornflowerblue;
+}
