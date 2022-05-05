@@ -13,26 +13,118 @@
   </head>
   <body>
     <div class="sidebar">
-      <div class="logo">Dashboard</div>
+      <div class="logo">
+        <svg class="icon-dashboard">
+          <use href="./images/dashboard.svg#dashboard"></use>
+        </svg>
+        <div>Dashboard</div>
+      </div>
       <div class="nav">
         <ul>
-          <li>Home</li>
-          <li>Profile</li>
-          <li>Messages</li>
-          <li>History</li>
-          <li>Tasks</li>
-          <li>Communities</li>
+          <li>
+            <a href="#">
+              <svg><use href="./images/home.svg#home"></use></svg>
+              <div>Home</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use href="./images/profile.svg#profile"></use>
+              </svg>
+              <div>Profile</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use href="./images/message.svg#message"></use>
+              </svg>
+              <div>Messages</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use href="./images/history.svg#history"></use>
+              </svg>
+              <div>History</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use href="./images/tasks.svg#tasks"></use>
+              </svg>
+              <div class="">Tasks</div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg>
+                <use href="./images/community.svg#community"></use>
+              </svg>
+              <div>Communities</div>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="settings">
         <ul>
-          <li>Settings</li>
-          <li>Support</li>
-          <li>Privacy</li>
+          <li>
+            <a href="#">
+              <svg>
+                <use href="./images/settings.svg#settings"></use>
+              </svg>
+              <div>Settings</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use href="./images/support.svg#support"></use>
+              </svg>
+              <div>Support</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use href="./images/privacy.svg#privacy"></use>
+              </svg>
+              <div>Privacy</div>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
-    <div class="header"></div>
+    <div class="header">
+      <div class="search">
+        <svg>
+          <use href="./images/search.svg#search"></use>
+        </svg>
+        <input type="search" name="search" id="search" />
+      </div>
+      <div class="alerts">
+        <svg>
+          <use href="./images/alert.svg#alert"></use>
+        </svg>
+        <img src="./images/profile_large.png" alt="A profile image" />
+        <div class="user-name">Johnny Bravo</div>
+      </div>
+      <div class="greeting">
+        <img src="./images/profile_large.png" alt="A profile image" />
+        <div>
+          <div>Hi there,</div>
+          <div>Johnny Bravo (@bravo)</div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button>New</button>
+        <button>Upload</button>
+        <button>Share</button>
+      </div>
+    </div>
     <div class="main"></div>
   </body>
 </html>
