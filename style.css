@@ -53,6 +53,7 @@ button {
     "search alerts"
     "greeting buttons";
   padding: 15px;
+  padding-right: 5%;
   font-size: 18px;
   font-weight: 700;
 }
@@ -89,7 +90,8 @@ button {
 }
 
 a:hover,
-a:hover > svg {
+a:hover > svg,
+button:hover {
   color: var(--color-hover-link);
   fill: var(--color-hover-link);
 }
@@ -127,10 +129,9 @@ ul li a {
   align-items: center;
 }
 
-.header svg {
+.header svg,
+.card svg {
   fill: var(--accent-bg-color);
-  height: 24px;
-  width: 24px;
 }
 
 img {
@@ -166,7 +167,8 @@ input:focus {
   grid-area: alerts;
   display: grid;
   grid-auto-flow: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  gap: 20px;
   align-items: center;
 }
 
@@ -192,7 +194,8 @@ input:focus {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: end;
+  gap: 20px;
 }
 
 button {
@@ -239,24 +242,27 @@ button {
 
 .projects .card {
   border-left: 8px solid var(--accent-bg-color);
+  display: grid;
+  grid-template-rows: min-content min-content auto;
 }
 
-.card h4,
-.announcement h4 {
-  margin-bottom: 0;
-  margin-top: 2px;
+.card-icons {
+  justify-self: end;
+  align-self: end;
+}
+
+.card-icons > svg {
+  padding-left: 10px;
 }
 
 .card p,
-.announcement p {
-  margin-top: 0;
-  margin-bottom: 3px;
+.card h4,
+.main h1 {
+  margin: 0;
 }
 
 .main h1 {
   font-size: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .trending {
@@ -271,12 +277,17 @@ hr {
   background-color: var(--accent-bg-color);
   height: 1px;
   width: 100%;
+  margin: 0;
 }
 
 .announcement-container {
   display: grid;
   grid-template-rows: min-content;
   grid-auto-flow: row;
+}
+
+.announcement-container .card {
+  display: grid;
 }
 
 .trending-container {
@@ -287,6 +298,6 @@ hr {
 .trending-container .card {
   display: grid;
   grid-auto-flow: row;
-  grid-template-rows: min-content;
+  grid-template-rows: repeat(4, 1fr);
   gap: 8px;
 }
